@@ -8,14 +8,20 @@ marp: true
     font-family: 'Chivo Mono', monospace;
   }
   section{
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
+  .heading{
+    font-size: 12rem;
+  }
+  h1{
+    color: red;
+  }
 </style>
 
----
 <section>
 
 # Github Actions
@@ -24,7 +30,6 @@ marp: true
 </section>
 
 ---
-
 <section>
 
 # O que é?
@@ -61,7 +66,7 @@ GitHub Actions não é exatamente uma ferramenta de CI, CD. Ele é mais voltado 
 
 ---
 <section>
-W
+
 # Exemplo
 Todo repositório do github apresenta uma aba de "actions", onde ficarão todos os fluxos de automação
 
@@ -107,5 +112,8 @@ Também vale lembrar que o GitHub Actions não é totalmente free, temos um limi
 
 ---
 <section>
+
 # THE END 👌
+
+</section>
 ---
