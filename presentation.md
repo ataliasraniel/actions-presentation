@@ -36,6 +36,13 @@ marp: true
 
 </section>
 ---
+---
+<section>
+
+# Uma ressalva
+GitHub Actions não é exatamente uma ferramenta de CI, CD. Ele é mais voltado para integrações com terceiros, inclusive com outras ferramentas de CI e CD como o Circle CI. GitHub Actions é mais voltado para ajudar na __integração com esses serviços__, sendo a ponte entre o desenvolvimento e ferramentas de CI & CD de terceiros como o Firebase Hosting, Firebase App Distribuition, Testings etc 
+
+</section>
 
 ---
 
@@ -47,6 +54,8 @@ marp: true
   <br/>
  
 - Os scripts usam síntaxe YAML para construir as instruções de serviços
+ <br/>
+- Dessa forma, é muito mais simples para os desenvolvedores e empresas cuidarem de muitos workflows de produção e entregas contínuas, como por exemplo **testes automatizados, publicação automática ao passar nos testes, publicação contínua com delivery incremental etc**
 
 </section>
 
