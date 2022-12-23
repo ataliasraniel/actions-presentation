@@ -20,11 +20,14 @@ marp: true
   h1{
     color: red;
   }
+ .fullHeight{
+  height: 100vh;
+ }
+
 </style>
 
----
 
-<section>
+<section class='fullHeight'>
 
 # Github Actions
 # &
@@ -34,7 +37,7 @@ marp: true
 
 ---
 
-<section>
+<section class='fullHeight'>
 
 # O que é?
 🤔
@@ -46,7 +49,7 @@ marp: true
 </section>
 
 ---
-<section>
+<section class='fullHeight'>
 
 # Uma ressalva 👍
 GitHub Actions não é exatamente uma ferramenta de CI, CD. Ele é mais voltado para integrações com terceiros, inclusive com outras ferramentas de CI e CD como o Circle CI. GitHub Actions é mais voltado para ajudar na __integração com esses serviços__, sendo a ponte entre o desenvolvimento e ferramentas de CI & CD de terceiros como o Firebase Hosting, Firebase App Distribuition, Testings etc 
@@ -55,7 +58,7 @@ GitHub Actions não é exatamente uma ferramenta de CI, CD. Ele é mais voltado 
 ---
 
 
-<section>
+<section class='fullHeight'>
 
 # Como funciona? 😮
 
@@ -63,6 +66,14 @@ GitHub Actions não é exatamente uma ferramenta de CI, CD. Ele é mais voltado 
   <br/>
  
 - Os scripts usam __Sintaxe YAML__ para construir as instruções de serviços
+  <br/>
+  ```YAML
+  valor: chave
+  outroValor:
+    outraChave: assim
+    vai: e tal
+  ``` 
+
  <br/>
 - Dessa forma, é muito mais simples para os desenvolvedores e empresas cuidarem de muitos workflows de produção e entregas contínuas, como por exemplo **testes automatizados, publicação automática ao passar nos testes, publicação contínua com delivery incremental etc**
 
@@ -155,7 +166,7 @@ Outro exemplo mais comum, é usar o __App Distribuition do Firebase__ para distr
 ---
 
 ---
-<section>
+<section class='fullHeight'>
 
 # Alternativas ao GitHub Actions (pagas)
 [Code magic](https://codemagic.io/start/)
@@ -169,7 +180,7 @@ Também vale lembrar que o GitHub Actions não é totalmente free, temos um limi
 
 
 ---
-<section>
+<section class='fullHeight'>
 
 # THE END 👌
 
