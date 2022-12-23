@@ -97,7 +97,26 @@ Para flutter, há alguns [Scripts no próprio marketplace do GitHub](https://git
 
 ![image4](images/image4.png)
 Exemplo de Script que faz o deploy para o Google Play **na variável ```serviceAccountJsonPlainText``` é onde fica o SecretKey que pegamos do Google Cloud**
-![image](images/image5.png)
+<!-- ![image](images/image5.png) -->
+
+
+```YAML
+uses: r0adkLL/upload-google-play@v1
+with:
+  serviceAccountJsonPlainText: ${{SERVICE_ACCOUNT_JSON}}
+  packageName: com.example.myApp
+  releaseFiles: app/build/outputs/bundle/release/app-release.aab
+  track: production
+  status: inProgress
+  inAppupdatePriority: 2
+  userFraction: 0.33
+  whatsNewDirectory: distribuition/whatsnew
+  mappingFile: app/build/outputs/mapping/release/mapping.txt
+  debugSymbols: app/intermediate/merged_native_libs/release/out/lib
+```
+Ao analizarmos, vemos que muita coisa é preparada para o lançamento automático: mappingFile, whatsNew, release files etc
+
+<br/>
 
 Outro exemplo mais comum, é usar o __App Distribuition do Firebase__ para distribuir builds novas gradativamente aos usuários, ao mesmo tempo que coleta novas informações de builds, isso é útil porque evita que tenhamos bugs de produção em larga escala. Nesse serviço, o Actions é ótimo porque pode fazer automaticamente também
 
