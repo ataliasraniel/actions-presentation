@@ -59,10 +59,10 @@ GitHub Actions não é exatamente uma ferramenta de CI, CD. Ele é mais voltado 
 
 # Como funciona? 😮
 
-- Github funciona com eventos, ao subirmos, criar novas branches etc, é disparado um evento, esse evento, podemos dar certos triggers, por exemplo: ao criar um novo pull request ou um novo commit, podemos rodar um *Script que roda os testes unitários no código, ou até mesmo subir diretamente para a Google Play ou Serviço de Hospedagem* 
+- Github funciona com __Trigger Events__, ao subirmos, criar novas branches etc, é disparado um evento, esse evento, podemos dar certos triggers, por exemplo: ao criar um novo pull request ou um novo commit, podemos rodar um *Script que roda os testes unitários no código, ou até mesmo subir diretamente para a Google Play ou Serviço de Hospedagem* 
   <br/>
  
-- Os scripts usam síntaxe YAML para construir as instruções de serviços
+- Os scripts usam __Sintaxe YAML__ para construir as instruções de serviços
  <br/>
 - Dessa forma, é muito mais simples para os desenvolvedores e empresas cuidarem de muitos workflows de produção e entregas contínuas, como por exemplo **testes automatizados, publicação automática ao passar nos testes, publicação contínua com delivery incremental etc**
 
