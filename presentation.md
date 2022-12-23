@@ -25,7 +25,8 @@ marp: true
 <section>
 
 # Github Actions
-## CI & CD
+# &
+# CI & CD
 
 </section>
 
@@ -44,7 +45,7 @@ marp: true
 ---
 <section>
 
-# Uma ressalva
+# Uma ressalva 👍
 GitHub Actions não é exatamente uma ferramenta de CI, CD. Ele é mais voltado para integrações com terceiros, inclusive com outras ferramentas de CI e CD como o Circle CI. GitHub Actions é mais voltado para ajudar na __integração com esses serviços__, sendo a ponte entre o desenvolvimento e ferramentas de CI & CD de terceiros como o Firebase Hosting, Firebase App Distribuition, Testings etc 
 
 </section>
@@ -53,7 +54,7 @@ GitHub Actions não é exatamente uma ferramenta de CI, CD. Ele é mais voltado 
 
 <section>
 
-# Como funciona?
+# Como funciona? 😮
 
 - Github funciona com eventos, ao subirmos, criar novas branches etc, é disparado um evento, esse evento, podemos dar certos triggers, por exemplo: ao criar um novo pull request ou um novo commit, podemos rodar um *Script que roda os testes unitários no código, ou até mesmo subir diretamente para a Google Play ou Serviço de Hospedagem* 
   <br/>
@@ -64,10 +65,9 @@ GitHub Actions não é exatamente uma ferramenta de CI, CD. Ele é mais voltado 
 
 </section>
 
----
 <section>
 
-# Exemplo
+# Como fazer ⚒️
 Todo repositório do github apresenta uma aba de "actions", onde ficarão todos os fluxos de automação
 
 ![description](images/image1.png)
@@ -81,12 +81,14 @@ Os jobs são criados com .YAML. No exemplo abaixo, o script que faz com que ao f
 
 
 </section>
-
-
 ---
+---
+---
+---
+
 <section>
 
-# Um exemplo em Flutter
+# Um exemplo em Flutter 🤳
 
 Para flutter, há alguns [Scripts no próprio marketplace do GitHub](https://github.com/r0adkll/upload-google-play) para rodar essas integrações. No caso, precisamos também ter uma Acces Key no Google Cloud Platform, para setar o CI e termos a permissão de mandar o **Appbundle diretamente para a loja**. Com a Access Key, podemos colocá-la no **SECRETS** do repo no GitHub. 
 
