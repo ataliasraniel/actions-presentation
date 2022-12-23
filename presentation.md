@@ -85,6 +85,36 @@ Ao clicar em "New Workflow", ou seja, criar um novo fluxo, aparecerá uma tela p
 Os jobs são criados com .YAML. No exemplo abaixo, o script que faz com que ao fazer um novo push, o job roda um comando NPM para pegar as dependências do projeto, rodar um build e assim que terminar, faz a publicação para o __Firebase Hosting__
 ![description](images/image3.png)
 
+Um exemplo de script que roda os testes de uma API feita em NodeJS
+```YAML
+name: Node.js CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x, 15.x]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm ci
+      - run: npm run build --if-present
+      - run: npm test
+```
+
 
 </section>
 ---
@@ -131,7 +161,7 @@ Outro exemplo mais comum, é usar o __App Distribuition do Firebase__ para distr
 [Code magic](https://codemagic.io/start/)
 [BitRise](https://bitrise.io/?utm_source=google&utm_medium=cpc&utm_campaign=conversion-focus&utm_source=google&utm_medium=cpc&utm_campaign=US-S-Platform&utm_term=Android_Androidbuild&gclid=CjwKCAiAnZCdBhBmEiwA8nDQxS2pb8bj5YInX9DF3wEVMl7eD-cENW-lqg421YgCMCYD9prztlas1RoC_mkQAvD_BwE&gclsrc=aw.ds)
 
-Também vale lembrar que o GitHub Actions não é totalmente free, temos um limite mensal de uso, no caso 2000 minutos:
+Também vale lembrar que o GitHub Actions não é totalmente free, temos um limite mensal de uso, no caso 2000 minutos. É válido também dizer que essas outras ferramentas não substituem completamente o Actions, mas podem ser uma extensão de suas funcionalidades, o que pode ser ótimo ao usar em conjunto.
 <br/>
 ![image](images/image6.png)
 
