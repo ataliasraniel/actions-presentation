@@ -8,7 +8,7 @@ marp: true
     font-family: 'Chivo Mono', monospace;
   }
   section{
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,6 +22,8 @@ marp: true
   }
 </style>
 
+---
+
 <section>
 
 # Github Actions
@@ -31,6 +33,7 @@ marp: true
 </section>
 
 ---
+
 <section>
 
 # O que é?
@@ -41,7 +44,7 @@ marp: true
 - Personalização de Jobs (scripts)
 
 </section>
----
+
 ---
 <section>
 
@@ -49,8 +52,8 @@ marp: true
 GitHub Actions não é exatamente uma ferramenta de CI, CD. Ele é mais voltado para integrações com terceiros, inclusive com outras ferramentas de CI e CD como o Circle CI. GitHub Actions é mais voltado para ajudar na __integração com esses serviços__, sendo a ponte entre o desenvolvimento e ferramentas de CI & CD de terceiros como o Firebase Hosting, Firebase App Distribuition, Testings etc 
 
 </section>
-
 ---
+
 
 <section>
 
@@ -75,15 +78,15 @@ Todo repositório do github apresenta uma aba de "actions", onde ficarão todos 
 Os jobs aparecerão dessa forma, com os seus respectivos Status
 ![description](images/image2.png)
 
+Ao clicar em "New Workflow", ou seja, criar um novo fluxo, aparecerá uma tela para você já começar com alguns templates ou fazer o próprio. Vale lembrar, porém, que a melhor alternativa vai ser sempre usar um dos templates já prontos, pois alguns serviços como a AWS, Composer do PHP etc já tem um fluxo preparado como no exemplo:
+
+![exemplo](images/image7.png)
 
 Os jobs são criados com .YAML. No exemplo abaixo, o script que faz com que ao fazer um novo push, o job roda um comando NPM para pegar as dependências do projeto, rodar um build e assim que terminar, faz a publicação para o __Firebase Hosting__
 ![description](images/image3.png)
 
 
 </section>
----
----
----
 ---
 
 <section>
@@ -96,6 +99,9 @@ Para flutter, há alguns [Scripts no próprio marketplace do GitHub](https://git
 Exemplo de Script que faz o deploy para o Google Play **na variável ```serviceAccountJsonPlainText``` é onde fica o SecretKey que pegamos do Google Cloud**
 ![image](images/image5.png)
 
+Outro exemplo mais comum, é usar o __App Distribuition do Firebase__ para distribuir builds novas gradativamente aos usuários, ao mesmo tempo que coleta novas informações de builds, isso é útil porque evita que tenhamos bugs de produção em larga escala. Nesse serviço, o Actions é ótimo porque pode fazer automaticamente também
+
+![exemplo](images/image8.png)
 </section>
 ---
 
@@ -107,6 +113,7 @@ Exemplo de Script que faz o deploy para o Google Play **na variável ```serviceA
 [BitRise](https://bitrise.io/?utm_source=google&utm_medium=cpc&utm_campaign=conversion-focus&utm_source=google&utm_medium=cpc&utm_campaign=US-S-Platform&utm_term=Android_Androidbuild&gclid=CjwKCAiAnZCdBhBmEiwA8nDQxS2pb8bj5YInX9DF3wEVMl7eD-cENW-lqg421YgCMCYD9prztlas1RoC_mkQAvD_BwE&gclsrc=aw.ds)
 
 Também vale lembrar que o GitHub Actions não é totalmente free, temos um limite mensal de uso, no caso 2000 minutos:
+<br/>
 ![image](images/image6.png)
 
 </section>
